@@ -1,0 +1,14 @@
+{
+    "instrumentos": [
+        {
+            "nombre": "Guitarra",
+            "descripcion": "Es un instrumento musical de la familia de los cordófonos, es decir los instrumentos que producen su sonido al hacer vibrar las cuerdas.",
+            "clasificacion": "Cordófono (de cuerda pulsada)"
+        },
+        {
+            "nombre": "Tambor",
+            "descripcion": "Es un instrumento de percusión de sonido indeterminado, perteneciente a la familia de los membranófonos según el sistema de clasificación de Hornbostel-Sachs.",
+            "clasificacion": "Instrumento de percusión"
+        }
+    ]
+}

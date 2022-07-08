@@ -1,0 +1,71 @@
+<link rel="import" href="../polymer/polymer-element.html">
+<link rel="import" href="./bower_components/iron-collapse/iron-collapse.html">
+
+<dom-module id="instrumento-musical">
+  <template>
+    <style>
+      :host {
+        display: block;
+        padding: 20px;
+        background-color: #d9fcfc;
+        margin-bottom: 15px;
+        border-radius: 10px;
+      }
+      h2{
+        color: #f82958;
+        font-size: 1.5rem;
+        margin: 0;
+        font-weight: 700;
+      }
+      p {
+        color: #6baae0;
+        font-size: 1rem;
+      }
+      p span {
+        font-weight: 700;
+      }
+    </style>
+    <h2 on-click="toggle">[[nombre]]</h2>
+    <iron-collapse opened="[[desplegado]]">
+      <p>[[descripcion]]</p>
+      <p><span>Clasificación: </span>[[clasificacion]]</p>
+    </iron-collapse>
+  </template>
+
+  <script>
+    /**
+     * `instrumento-musical`
+     * Detalle del intrumento musical
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class InstrumentoMusical extends Polymer.Element {
+      static get is() { return 'instrumento-musical'; }
+      static get properties() {
+        return {
+          nombre: {
+            type: String,
+          }, 
+          clasificacion: {
+            type: String,
+            value: "Sin clasificación"
+          },
+          descripcion: {
+            type: String,
+          },
+          desplegado: {
+            type: Boolean,
+            value: false
+          }
+        };
+      }
+      toggle() {
+        this.desplegado = !this.desplegado;
+      }
+    }
+
+    window.customElements.define(InstrumentoMusical.is, InstrumentoMusical);
+  </script>
+</dom-module>
